@@ -1,79 +1,48 @@
 <!-- SEO Meta -->
 <!--
-  Title: Panth HTML Sitemap — Customer-facing /sitemap page for Magento 2 (Hyva + Luma)
-  Description: Theme-agnostic HTML sitemap page for Magento 2. Renders categories (nested tree), products (grid with pagination for 100k+ catalogs), CMS pages, store switcher and custom links at /sitemap. Works identically on Hyva and Luma. Extracted from Panth_AdvancedSEO for independent installation.
-  Keywords: magento 2 html sitemap, magento sitemap.html, magento seo sitemap, hyva html sitemap, luma html sitemap, magento category tree sitemap, magento customer sitemap, paginated html sitemap magento
+  Title: Magento 2 HTML Sitemap Extension: Customer-Facing /sitemap Page for Hyva and Luma | Panth Infotech
+  Description: Panth HTML Sitemap adds a clean /sitemap page to Magento 2 with a nested category tree, paginated product grid (handles 100k+ catalogs), CMS pages, store switcher, and custom links. Works identically on Hyva and Luma. Theme-agnostic plain PHP rendering with no Alpine or RequireJS dependency. Built by Top Rated Plus Magento developer Kishan Savaliya.
+  Keywords: magento 2 html sitemap, magento 2 html sitemap extension, magento 2 sitemap page, magento sitemap.html, hyva html sitemap, luma html sitemap, magento 2 category tree sitemap, magento 2 customer sitemap, paginated html sitemap magento, magento 2 seo sitemap page, magento 2 sitemap module
   Author: Kishan Savaliya (Panth Infotech)
+  Canonical: https://kishansavaliya.com/magento-2-html-sitemap.html
 -->
 
-# Panth HTML Sitemap — Customer-facing /sitemap Page for Magento 2 (Hyva + Luma)
+# Magento 2 HTML Sitemap Extension: Customer-Facing /sitemap Page for Hyva and Luma
 
 [![Magento 2.4.4 - 2.4.8](https://img.shields.io/badge/Magento-2.4.4%20--%202.4.8-orange?logo=magento&logoColor=white)](https://magento.com)
 [![PHP 8.1 - 8.4](https://img.shields.io/badge/PHP-8.1%20--%208.4-blue?logo=php&logoColor=white)](https://php.net)
-[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red)]()
+[![Hyva + Luma](https://img.shields.io/badge/Themes-Hyva%20%2B%20Luma-14b8a6)](https://www.hyva.io)
+[![Live Demo & Details](https://img.shields.io/badge/Live%20Demo%20%26%20Details-magento--2--html--sitemap-0D9488?style=flat)](https://kishansavaliya.com/magento-2-html-sitemap.html)
 [![Packagist](https://img.shields.io/badge/Packagist-mage2kishan%2Fmodule--html--sitemap-orange?logo=packagist&logoColor=white)](https://packagist.org/packages/mage2kishan/module-html-sitemap)
-[![Hyva Compatible](https://img.shields.io/badge/Hyva-Compatible-14b8a6?logo=alpinedotjs&logoColor=white)](https://hyva.io)
-[![Luma Compatible](https://img.shields.io/badge/Luma-Compatible-orange)]()
 [![Upwork Top Rated Plus](https://img.shields.io/badge/Upwork-Top%20Rated%20Plus-14a800?logo=upwork&logoColor=white)](https://www.upwork.com/freelancers/~016dd1767321100e21)
-[![Panth Infotech Agency](https://img.shields.io/badge/Agency-Panth%20Infotech-14a800?logo=upwork&logoColor=white)](https://www.upwork.com/agencies/1881421506131960778/)
 [![Website](https://img.shields.io/badge/Website-kishansavaliya.com-0D9488)](https://kishansavaliya.com)
-[![Get a Quote](https://img.shields.io/badge/Get%20a%20Quote-Free%20Estimate-DC2626)](https://kishansavaliya.com/get-quote)
 
-> **A complete, theme-agnostic HTML sitemap page** for Magento 2 at `/sitemap` — categories as a nested tree, products in a paginated grid that handles **100k+ catalogs**, CMS pages, store switcher and custom links. Works identically on **Hyva** and **Luma**. Plain PHP + vanilla JS + scoped CSS — no Alpine / RequireJS / mage-init glue.
+> **Add a clean, human-readable sitemap page to your Magento 2 store at `/sitemap`.** Panth HTML Sitemap renders categories as a nested tree, products in a paginated grid that handles catalogs of 100k+ items, CMS pages, an optional store switcher, and custom admin-defined links. The rendering is plain PHP with no Alpine or RequireJS dependency, so it works identically on **Hyva** and **Luma**.
 
-Magento's built-in XML sitemap is for Google. This module is for **humans** — a readable page your customers land on when they're lost, and an internal-linking surface that spreads PageRank across every category and product on your store.
-
----
-
-## Preview
-
-### Admin Configuration
-
-![Admin Configuration — Stores → Configuration → Panth Infotech → HTML Sitemap](docs/admin-configuration.png)
-
-*All 15 toggles at **Stores → Configuration → Panth Infotech → HTML Sitemap** — master switch, show categories (with max-depth limit), show products (with sort order, URL structure, pagination), show CMS pages (with exclude list), show store switcher, show custom links, meta title / description, client-side search field, and **products-per-page** (50–2000, default 500 — the sitemap handles 100k+ products via `?p=N` pagination).*
+**Product page:** [kishansavaliya.com/magento-2-html-sitemap.html](https://kishansavaliya.com/magento-2-html-sitemap.html)
 
 ---
 
-### Frontend — Hyvä theme
+## Quick Answer
 
-<table>
-<tr>
-<td width="33%" align="center"><b>Hero + Categories tree</b></td>
-<td width="33%" align="center"><b>Product grid</b></td>
-<td width="33%" align="center"><b>CMS pages</b></td>
-</tr>
-<tr>
-<td><a href="docs/hyva-hero.png"><img src="docs/hyva-hero.png" alt="Hyvä — hero banner + category tree with 'On this page' sidebar"/></a></td>
-<td><a href="docs/hyva-products.png"><img src="docs/hyva-products.png" alt="Hyvä — paginated product grid with image, name, price"/></a></td>
-<td><a href="docs/hyva-pages.png"><img src="docs/hyva-pages.png" alt="Hyvä — CMS pages section and footer"/></a></td>
-</tr>
-</table>
+**What is Panth HTML Sitemap?** It is a Magento 2 extension that creates a clean `/sitemap` page for your customers, showing all categories, products, and CMS pages in one place so shoppers can find what they need and search engines can crawl every link.
 
-*Native Hyvä styling — gradient hero with live counts (categories / products / pages), sticky "On this page" sidebar, and a scoped stylesheet so nothing leaks into the theme's Tailwind bundle.*
+**What does it add to my store?**
 
----
+- A **`/sitemap` page** with a nested category tree, paginated product grid, CMS pages list, optional store switcher, and optional custom links.
+- **Admin configuration** under Stores with 17 settings including sort order, pagination size, meta title, meta description, and per-section toggles.
+- A **per-category exclude flag** so you can hide individual categories from the tree without editing configuration files.
+- **Optional integrations** with Panth_Testimonials, Panth_Faq, and Panth_DynamicForms that show those sections when those modules are installed.
 
-### Frontend — Luma theme
+**Which themes are supported?** Both **Hyva** and **Luma**. The template is plain PHP with vanilla JS and scoped CSS, so neither Alpine nor RequireJS is needed.
 
-<table>
-<tr>
-<td width="33%" align="center"><b>Hero + Categories tree</b></td>
-<td width="33%" align="center"><b>Product grid</b></td>
-<td width="33%" align="center"><b>CMS pages</b></td>
-</tr>
-<tr>
-<td><a href="docs/luma-hero.png"><img src="docs/luma-hero.png" alt="Luma — hero banner + category tree with 'On this page' sidebar"/></a></td>
-<td><a href="docs/luma-products.png"><img src="docs/luma-products.png" alt="Luma — paginated product grid"/></a></td>
-<td><a href="docs/luma-pages.png"><img src="docs/luma-pages.png" alt="Luma — CMS pages section and footer"/></a></td>
-</tr>
-</table>
-
-*Identical markup on Luma — the template is plain PHP + vanilla JS + prefix-scoped CSS (`.panth-htmlsitemap`), so the same rendering logic produces the same output under Luma's RequireJS layer without any theme-specific overrides.*
+**What does it need?** Magento 2.4.4 to 2.4.8, PHP 8.1 to 8.4, and the free `mage2kishan/module-core` package.
 
 ---
 
 ## Need Custom Magento 2 Development?
+
+> **Get a free quote for your project in 24 hours** for custom modules, Hyva themes, performance work, M1 to M2 migrations, and Adobe Commerce Cloud.
 
 <p align="center">
   <a href="https://kishansavaliya.com/get-quote">
@@ -90,45 +59,180 @@ Magento's built-in XML sitemap is for Google. This module is for **humans** — 
 
 [![Hire on Upwork](https://img.shields.io/badge/Hire%20on%20Upwork-Top%20Rated%20Plus-14a800?style=for-the-badge&logo=upwork&logoColor=white)](https://www.upwork.com/freelancers/~016dd1767321100e21)
 
+100% Job Success • 10+ Years Magento Experience
+Adobe Certified • Hyva Specialist
+
 </td>
 <td width="50%" align="center">
 
 ### Panth Infotech Agency
+**Magento Development Team**
 
 [![Visit Agency](https://img.shields.io/badge/Visit%20Agency-Panth%20Infotech-14a800?style=for-the-badge&logo=upwork&logoColor=white)](https://www.upwork.com/agencies/1881421506131960778/)
+
+Custom Modules • Theme Design • Migrations
+Performance • SEO • Adobe Commerce Cloud
 
 </td>
 </tr>
 </table>
 
+**Visit our website:** [kishansavaliya.com](https://kishansavaliya.com) &nbsp;|&nbsp; **Get a quote:** [kishansavaliya.com/get-quote](https://kishansavaliya.com/get-quote)
+
 ---
 
 ## Table of Contents
 
-- [Features](#features)
-- [Scales to 100k+ Products](#scales-to-100k-products)
+- [Who Is It For](#who-is-it-for)
+- [Key Features](#key-features)
 - [Compatibility](#compatibility)
 - [Installation](#installation)
-- [Admin Configuration](#admin-configuration)
+- [Configuration](#configuration)
+- [How It Works](#how-it-works)
 - [Hiding a Category](#hiding-a-category)
-- [Troubleshooting](#troubleshooting)
+- [Scales to 100k+ Products](#scales-to-100k-products)
+- [FAQ](#faq)
 - [Support](#support)
+- [About Panth Infotech](#about-panth-infotech)
+- [Quick Links](#quick-links)
 
 ---
 
-## Features
+## Who Is It For
 
-- **`/sitemap` URL** — clean custom-router URL, no `/seo/` or `/htmlsitemap/` prefix visible to customers.
-- **Nested category tree** — respects store root, max-depth limit, `is_active`, and a per-category `exclude_from_html_sitemap` flag.
-- **Product grid with pagination** — `?p=N` pagination for large catalogs, admin-configurable page size (50–2000, default 500), absolute hard cap of 2,000 pages, efficient `COUNT(DISTINCT)` + `LIMIT/OFFSET` on indexed EAV joins.
-- **Product sort options** — name A→Z, name Z→A, newest, oldest, price ascending, position.
-- **Short vs category URLs** — choose whether product links are `/product.html` or `/category/product.html`.
-- **CMS pages list** — excludes homepage + `no-route` automatically; admin-configurable extra exclusions (e.g. `privacy-policy,cookie-policy`).
-- **Store switcher** — optional list of all active stores with their base URLs.
-- **Custom links** — free-form admin textarea, one link per line (`URL | Label`).
-- **Client-side search** — optional search box filters the visible sections in real time, no network calls.
-- **SEO-friendly meta** — admin-configurable meta title and meta description.
-- **Theme-agnostic rendering** — plain PHP + inline vanilla JS + prefix-scoped CSS class. No Alpine, no RequireJS, no mage-init.
+- **Merchants with large catalogs** who want customers to browse every category and product without relying only on the search bar.
+- **SEO-focused stores** that want a single human-readable page to spread internal links across the full catalog and CMS content.
+- **Hyva storefronts** that need a sitemap page built without Alpine or RequireJS so it fits the Hyva stack cleanly.
+- **Multi-store setups** where different store views need different sitemap configurations at the store-view scope.
+- **Store owners** who want to control exactly which categories, products, and pages appear on the sitemap without editing templates.
+
+---
+
+## Key Features
+
+### Customer-Facing Sitemap at /sitemap
+- **Clean custom-router URL** at `/sitemap` with no `/seo/` or `/htmlsitemap/` prefix visible to customers.
+- **Nested category tree** that respects the store root, a configurable max-depth limit, the `is_active` flag, and a per-category exclude flag.
+- **Paginated product grid** with `?p=N` pagination so large catalogs load fast. Admin-configurable page size from 50 to 2000, default 500.
+- **Product sort options**: name A to Z, name Z to A, newest, oldest, price ascending, position.
+- **Short or category URLs** for products, configurable per store view.
+- **CMS pages list** with automatic exclusion of the homepage and `no-route`. Extra exclusions are configurable with a comma-separated list.
+
+### Admin Controls
+- **17 configuration settings** under Stores → Configuration → Panth Extensions → HTML Sitemap.
+- **Store switcher section** that lists all active stores with their base URLs, shown when enabled.
+- **Custom links section** with a free-form textarea, one link per line in `URL | Label` format.
+- **Meta title and meta description** fields so the sitemap page has the right SEO metadata.
+- **Client-side search field** that filters visible sections in real time with no network calls.
+
+### Optional Integrations
+- **Panth_Testimonials** section shown on the sitemap when that module is installed.
+- **Panth_Faq** section shown when Panth_Faq is installed.
+- **Panth_DynamicForms** pages section shown when that module is installed and forms with `form_type = page` exist.
+- All optional integrations use table-existence guards and add nothing if the module is not present.
+
+### Hyva + Luma Ready
+- **Theme-agnostic template** built in plain PHP with vanilla JS and prefix-scoped CSS (`.panth-htmlsitemap`).
+- **No Alpine, no RequireJS, no mage-init** required, so the same rendering logic works under both Hyva's Tailwind stack and Luma's RequireJS layer.
+- **Scoped stylesheet** so nothing leaks into the theme's CSS bundle.
+
+### Built to Last
+- **Clean MEQP-style code** with constructor dependency injection only.
+- **Full Page Cache friendly** because the sitemap page renders server-side with no uncacheable AJAX calls.
+- **Translation ready**, every label uses Magento's `__()` function.
+- **Multi-store scope** for all configuration settings at default, website, and store view level.
+
+---
+
+## Compatibility
+
+| Requirement | Versions Supported |
+|---|---|
+| Magento Open Source | 2.4.4, 2.4.5, 2.4.6, 2.4.7, 2.4.8 |
+| Adobe Commerce | 2.4.4, 2.4.5, 2.4.6, 2.4.7, 2.4.8 |
+| Adobe Commerce Cloud | 2.4.4 to 2.4.8 |
+| PHP | 8.1.x, 8.2.x, 8.3.x, 8.4.x |
+| Hyva Theme | 1.0+ (theme-agnostic template) |
+| Luma Theme | Native support |
+| Required Dependency | `mage2kishan/module-core` (free) |
+
+---
+
+## Installation
+
+### Composer Installation (Recommended)
+
+```bash
+composer require mage2kishan/module-html-sitemap
+bin/magento module:enable Panth_Core Panth_HtmlSitemap
+bin/magento setup:upgrade
+bin/magento setup:di:compile
+bin/magento setup:static-content:deploy -f
+bin/magento cache:flush
+```
+
+### Manual Installation via ZIP
+
+1. Download the latest release from [Packagist](https://packagist.org/packages/mage2kishan/module-html-sitemap) or from the [product page](https://kishansavaliya.com/magento-2-html-sitemap.html).
+2. Extract it to `app/code/Panth/HtmlSitemap/` in your Magento install.
+3. Make sure `Panth_Core` is installed too (required dependency).
+4. Run the commands above starting from `bin/magento module:enable`.
+
+### Verify Installation
+
+```bash
+bin/magento module:status Panth_HtmlSitemap
+# Expected: Module is enabled
+```
+
+After install, visit `https://your-store.example/sitemap` and open:
+```
+Admin → Stores → Configuration → Panth Extensions → HTML Sitemap
+```
+
+---
+
+## Configuration
+
+Go to **Stores → Configuration → Panth Extensions → HTML Sitemap** (or use the direct link under the **Panth Infotech** admin sidebar menu).
+
+| Setting | Group | Default | Description |
+|---|---|---|---|
+| Enable HTML Sitemap | General | Yes | Master toggle. When disabled, `/sitemap` returns a 404. |
+| Show Categories | General | Yes | Render the nested category tree. |
+| Max Category Depth | General | 0 | Limit tree depth. 0 means unlimited. |
+| Show Products | General | Yes | Render the paginated product grid. |
+| Product Sort Order | General | Name (A-Z) | Name A-Z, Name Z-A, Newest, Oldest, Price, Position. |
+| Product URL Structure | General | Short | Short (`/product.html`) or with category prefix. |
+| Products Per Page | General | 500 | Pagination size. Range 50 to 2000. |
+| Show CMS Pages | General | Yes | Include active CMS pages (homepage and no-route excluded automatically). |
+| Exclude CMS Pages | General | (empty) | Comma-separated CMS page identifiers to hide, e.g. `privacy-policy,cookie-policy`. |
+| Show Store Switcher | General | No | List all active stores with their base URLs. |
+| Show Testimonials | General | No | Show Panth_Testimonials section if that module is installed. |
+| Show FAQs | General | No | Show Panth_Faq section if that module is installed. |
+| Show Dynamic Forms | General | No | Show Panth_DynamicForms pages if that module is installed. |
+| Show Custom Links | General | No | Render an admin-editable list of links. |
+| Custom Links | General | (empty) | One link per line in `URL \| Label` format. |
+| Meta Title | General | Site Map | `<title>` on the sitemap page. |
+| Meta Description | General | (empty) | `<meta name="description">` for the sitemap page. |
+| Show Search Field | General | No | Client-side filter field that narrows visible sections in real time. |
+
+---
+
+## How It Works
+
+1. A **custom router** catches requests to `/sitemap` and forwards them to the sitemap controller.
+2. The controller reads configuration and builds the page sections: category tree, product grid, CMS pages, optional integrations, store switcher, and custom links.
+3. For the **product grid**, the underlying SQL uses `LIMIT/OFFSET` on indexed EAV joins with a single `COUNT(DISTINCT)` for the total. This keeps render time roughly constant regardless of catalog size.
+4. The template is **plain PHP** with inline vanilla JS and a scoped stylesheet. No Alpine component, no RequireJS define, no mage-init attribute is needed, so Hyva and Luma render the same output.
+5. **Pagination** happens via `?p=N` query parameter. The module enforces a hard cap of 2,000 pages to prevent runaway URLs.
+6. **Meta title and description** are injected into the page head from the admin configuration fields.
+
+---
+
+## Hiding a Category
+
+Every category has an **"Exclude from HTML Sitemap"** field at **Catalog → Categories → {category} → Search Engine Optimization**. Set it to **Yes** to hide that category from the rendered tree. Flush the sitemap layout cache after making changes.
 
 ---
 
@@ -136,97 +240,167 @@ Magento's built-in XML sitemap is for Google. This module is for **humans** — 
 
 The product section is designed for real catalogs:
 
-- **Pagination:** default 500 products per page via `?p=N`. Admin-configurable 50–2000.
-- **Absolute hard cap:** 2,000 pages regardless of catalog size — beyond that an XML sitemap is the right tool.
-- **Efficient queries:** one `COUNT(DISTINCT e.entity_id)` for total count (memoised per request), then `LIMIT/OFFSET` on the paged SELECT. No `array_slice` on giant arrays, no full catalog load into memory.
-- **Indexed joins only:** `catalog_product_entity` × `catalog_product_website` × `catalog_product_entity_int` (visibility + status) — every filter column is indexed in stock Magento.
+- **Pagination:** default 500 products per page via `?p=N`. Admin-configurable 50 to 2000.
+- **Absolute hard cap:** 2,000 pages regardless of catalog size. Beyond that an XML sitemap is the right tool.
+- **Efficient queries:** one `COUNT(DISTINCT e.entity_id)` for the total count (memoised per request), then `LIMIT/OFFSET` on the paged SELECT. No full catalog load into memory.
+- **Indexed joins only:** `catalog_product_entity` joined with `catalog_product_website` and `catalog_product_entity_int` (visibility and status). Every filter column is indexed in stock Magento.
 
-Benchmarked render time per page is roughly constant regardless of total catalog size: **the sitemap page for product #50,000 renders as fast as the one for product #1**.
-
----
-
-## Compatibility
-
-| Requirement | Supported |
-|---|---|
-| Magento Open Source | 2.4.4, 2.4.5, 2.4.6, 2.4.7, 2.4.8 |
-| Adobe Commerce | 2.4.4 — 2.4.8 |
-| PHP | 8.1, 8.2, 8.3, 8.4 |
-| Hyva Theme | 1.0+ (theme-agnostic template) |
-| Luma Theme | Native support |
-| Panth Core | ^1.0 (installed automatically) |
+Benchmarked render time per page is roughly constant regardless of total catalog size: the sitemap page for product 50,000 renders as fast as the one for product 1.
 
 ---
 
-## Installation
+## Preview
 
-```bash
-composer require mage2kishan/module-html-sitemap
-bin/magento module:enable Panth_Core Panth_HtmlSitemap
-bin/magento setup:upgrade
-bin/magento setup:di:compile
-bin/magento cache:flush
-```
+### Admin Configuration
 
-### Verify
+![Admin Configuration - Stores - Configuration - Panth Infotech - HTML Sitemap](docs/admin-configuration.png)
 
-```bash
-bin/magento module:status Panth_HtmlSitemap
-# Module is enabled
-```
-
-Then visit `https://your-store.example/sitemap`.
+*All settings at **Stores → Configuration → Panth Infotech → HTML Sitemap** including the master switch, category tree controls, product grid controls, CMS pages, optional integrations, store switcher, custom links, meta fields, and the client-side search toggle.*
 
 ---
 
-## Admin Configuration
+### Frontend - Hyva Theme
 
-Navigate to **Stores → Configuration → Panth Infotech → HTML Sitemap**. A direct link also appears under the **Panth Infotech** admin sidebar.
+<table>
+<tr>
+<td width="33%" align="center"><b>Hero + Categories tree</b></td>
+<td width="33%" align="center"><b>Product grid</b></td>
+<td width="33%" align="center"><b>CMS pages</b></td>
+</tr>
+<tr>
+<td><a href="docs/hyva-hero.png"><img src="docs/hyva-hero.png" alt="Hyva - hero banner + category tree with On this page sidebar"/></a></td>
+<td><a href="docs/hyva-products.png"><img src="docs/hyva-products.png" alt="Hyva - paginated product grid with image, name, price"/></a></td>
+<td><a href="docs/hyva-pages.png"><img src="docs/hyva-pages.png" alt="Hyva - CMS pages section and footer"/></a></td>
+</tr>
+</table>
 
-| Setting | Default | Purpose |
-|---|---|---|
-| Enable HTML Sitemap | Yes | Master switch. No = `/sitemap` returns 404. |
-| Show Categories | Yes | Render the nested category tree. |
-| Max Category Depth | 0 | Limit tree depth. 0 = unlimited. |
-| Show Products | Yes | Render the paginated product grid. |
-| Product Sort Order | Name (A-Z) | Name/newest/oldest/price/position. |
-| Product URL Structure | Short | `/product.html` vs `/category/product.html`. |
-| Products Per Page | 500 | Pagination size. Range 50–2000. |
-| Show CMS Pages | Yes | Include active CMS pages. |
-| Show Store Switcher | No | List all active stores. |
-| Show Custom Links | No | Render admin-editable link list. |
-| Custom Links | (empty) | `URL \| Label` one per line. |
-| Meta Title | Site Map | `<title>` on the sitemap page. |
-| Meta Description | (empty) | `<meta name="description">`. |
-| Exclude CMS Pages | (empty) | Comma-separated identifiers to hide. |
-| Show Search Field | No | Client-side filter across visible sections. |
+*Native Hyva styling with a gradient hero showing live counts, a sticky "On this page" sidebar, and a scoped stylesheet so nothing leaks into the Tailwind bundle.*
 
 ---
 
-## Hiding a Category
+### Frontend - Luma Theme
 
-Every category now has an **"Exclude from HTML Sitemap"** field in *Catalog → Categories → {category} → Search Engine Optimization*. Flip it to **Yes** to hide that category (and its link-children reset to the catalog root, not the hidden category) from the rendered tree. Flush the sitemap's layout cache after changes.
+<table>
+<tr>
+<td width="33%" align="center"><b>Hero + Categories tree</b></td>
+<td width="33%" align="center"><b>Product grid</b></td>
+<td width="33%" align="center"><b>CMS pages</b></td>
+</tr>
+<tr>
+<td><a href="docs/luma-hero.png"><img src="docs/luma-hero.png" alt="Luma - hero banner + category tree with On this page sidebar"/></a></td>
+<td><a href="docs/luma-products.png"><img src="docs/luma-products.png" alt="Luma - paginated product grid"/></a></td>
+<td><a href="docs/luma-pages.png"><img src="docs/luma-pages.png" alt="Luma - CMS pages section and footer"/></a></td>
+</tr>
+</table>
+
+*Identical markup on Luma. The same plain PHP template produces the same output under Luma's RequireJS layer without any theme-specific overrides.*
 
 ---
 
-## Troubleshooting
+## FAQ
 
-### `/sitemap` returns 404
+### Does it work on Hyva themes without Alpine.js?
+Yes. The template is plain PHP with vanilla JS and prefix-scoped CSS. It has no Alpine component, no RequireJS define, and no mage-init attributes, so it loads and works the same way on both Hyva and Luma.
 
-Check the master toggle: **Stores → Configuration → Panth Infotech → HTML Sitemap → Enable HTML Sitemap** must be *Yes*. If the module is installed but the config was never saved, the `config.xml` default (enabled=1) still applies — flush config cache.
+### How does the module handle large catalogs?
+The product section paginates via `?p=N`. The default page size is 500 products. The underlying SQL uses `LIMIT/OFFSET` on indexed EAV joins and a single memoised `COUNT(DISTINCT)` query, so render time stays roughly constant no matter how many products are in the store. A hard cap of 2,000 pages prevents runaway URLs.
 
-### Products page shows empty after pagination
+### Can I hide specific categories from the sitemap?
+Yes. Each category has an "Exclude from HTML Sitemap" field under its SEO tab in the admin. Set it to Yes and flush cache. There is no need to edit configuration or templates.
 
-Two causes: (a) `?p=N` is beyond the last page — clamp client-side to `getTotalProductPages()`; (b) the visible-product join returns nothing because the store has no products with `visibility IN (2,4)` and `status = 1`. Run `SELECT COUNT(*) FROM catalog_product_entity` to sanity-check the catalog.
+### Can I hide specific CMS pages?
+Yes. The "Exclude CMS Pages" field takes a comma-separated list of CMS page identifiers. The homepage and `no-route` page are excluded automatically.
 
-### DI compile fails after `composer require`
+### Does it support multi-store setups?
+Yes. All configuration settings are available at default, website, and store view scope, so each store view can have its own sitemap settings.
 
-Ensure `Panth_Core`, `Magento_Store`, `Magento_Catalog`, `Magento_Cms` and `Magento_Eav` are all enabled — they are hard dependencies.
+### Does the `/sitemap` URL conflict with Magento's XML sitemap?
+No. Magento's built-in XML sitemap is served at the path you configure (usually `/sitemap.xml`). This module serves a human-readable HTML page at `/sitemap`. They are separate routes and do not interfere.
+
+### What optional integrations are available?
+The module can show Testimonials, FAQ entries, and Dynamic Form pages on the sitemap if you have the Panth_Testimonials, Panth_Faq, or Panth_DynamicForms modules installed. Each integration uses a table-existence guard, so nothing breaks if those modules are absent.
+
+### Does it need Panth Core?
+Yes. `mage2kishan/module-core` is a free required dependency. Composer installs it automatically.
+
+### Is it translation ready?
+Yes. Every label uses Magento's `__()` function, so you can translate from a theme or language pack.
 
 ---
 
 ## Support
 
-- **Issues:** [github.com/mage2sk/module-html-sitemap/issues](https://github.com/mage2sk/module-html-sitemap/issues)
-- **Agency:** [Panth Infotech on Upwork](https://www.upwork.com/agencies/1881421506131960778/)
-- **Direct:** [kishansavaliya.com](https://kishansavaliya.com) — [Get a free quote](https://kishansavaliya.com/get-quote)
+| Channel | Contact |
+|---|---|
+| Product Page | [kishansavaliya.com/magento-2-html-sitemap.html](https://kishansavaliya.com/magento-2-html-sitemap.html) |
+| Email | kishansavaliyakb@gmail.com |
+| Website | [kishansavaliya.com](https://kishansavaliya.com) |
+| WhatsApp | +91 84012 70422 |
+| GitHub Issues | [github.com/mage2sk/module-html-sitemap/issues](https://github.com/mage2sk/module-html-sitemap/issues) |
+| Upwork (Top Rated Plus) | [Hire Kishan Savaliya](https://www.upwork.com/freelancers/~016dd1767321100e21) |
+| Upwork Agency | [Panth Infotech](https://www.upwork.com/agencies/1881421506131960778/) |
+
+Response time: 1-2 business days.
+
+### Need Custom Magento Development?
+
+Looking for **custom Magento module development**, **Hyva theme work**, **store migrations**, or **performance tuning**? Get a free quote in 24 hours:
+
+<p align="center">
+  <a href="https://kishansavaliya.com/get-quote">
+    <img src="https://img.shields.io/badge/%F0%9F%92%AC%20Get%20a%20Free%20Quote-kishansavaliya.com%2Fget--quote-DC2626?style=for-the-badge" alt="Get a Free Quote" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://www.upwork.com/freelancers/~016dd1767321100e21">
+    <img src="https://img.shields.io/badge/Hire%20Kishan-Top%20Rated%20Plus-14a800?style=for-the-badge&logo=upwork&logoColor=white" alt="Hire on Upwork" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://www.upwork.com/agencies/1881421506131960778/">
+    <img src="https://img.shields.io/badge/Visit-Panth%20Infotech%20Agency-14a800?style=for-the-badge&logo=upwork&logoColor=white" alt="Visit Agency" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://kishansavaliya.com/magento-2-html-sitemap.html">
+    <img src="https://img.shields.io/badge/View%20Product%20Page-magento--2--html--sitemap-0D9488?style=for-the-badge" alt="View Product Page" />
+  </a>
+</p>
+
+---
+
+## About Panth Infotech
+
+Built and maintained by **Kishan Savaliya** ([kishansavaliya.com](https://kishansavaliya.com)), a **Top Rated Plus** Magento developer on Upwork with 10+ years of eCommerce experience.
+
+**Panth Infotech** is a Magento 2 development agency that builds high quality, security focused extensions and themes for both Hyva and Luma storefronts. The extension suite covers SEO, performance, checkout, product presentation, customer engagement, and store management, with each module built to MEQP standards and tested across Magento 2.4.4 to 2.4.8.
+
+Browse the full extension catalog on our [Magento extensions page](https://kishansavaliya.com/magento-extensions.html) or on [Packagist](https://packagist.org/packages/mage2kishan/).
+
+---
+
+## Quick Links
+
+| Resource | Link |
+|---|---|
+| **Product Page** | [magento-2-html-sitemap.html](https://kishansavaliya.com/magento-2-html-sitemap.html) |
+| **Packagist** | [mage2kishan/module-html-sitemap](https://packagist.org/packages/mage2kishan/module-html-sitemap) |
+| **GitHub** | [mage2sk/module-html-sitemap](https://github.com/mage2sk/module-html-sitemap) |
+| **Website** | [kishansavaliya.com](https://kishansavaliya.com) |
+| **Free Quote** | [kishansavaliya.com/get-quote](https://kishansavaliya.com/get-quote) |
+| **Upwork (Top Rated Plus)** | [Hire Kishan Savaliya](https://www.upwork.com/freelancers/~016dd1767321100e21) |
+| **Upwork Agency** | [Panth Infotech](https://www.upwork.com/agencies/1881421506131960778/) |
+| **Email** | kishansavaliyakb@gmail.com |
+| **WhatsApp** | +91 84012 70422 |
+
+---
+
+<p align="center">
+  <strong>Ready to give your customers a fast way to find anything in your store?</strong><br/>
+  <a href="https://kishansavaliya.com/magento-2-html-sitemap.html">
+    <img src="https://img.shields.io/badge/%F0%9F%9A%80%20See%20HTML%20Sitemap%20%E2%86%92-Product%20Page%20%26%20Demo-DC2626?style=for-the-badge" alt="See HTML Sitemap" />
+  </a>
+</p>
+
+---
+
+**SEO Keywords:** magento 2 html sitemap, magento 2 html sitemap extension, magento 2 html sitemap module, magento 2 sitemap page, magento sitemap.html, magento 2 customer sitemap, hyva html sitemap, hyva sitemap extension, luma html sitemap, magento 2 category tree sitemap, magento 2 paginated sitemap, magento 2 seo sitemap page, magento 2 human readable sitemap, magento 2 sitemap with categories, magento 2 sitemap with products, magento 2 cms pages sitemap, magento 2 custom links sitemap, magento 2 store switcher sitemap, magento 2.4.8 html sitemap, php 8.4 html sitemap, mage2kishan html sitemap, panth html sitemap, panth infotech, hire magento developer, top rated plus upwork, kishan savaliya magento, custom magento development

@@ -4,6 +4,18 @@ All notable changes to this extension are documented here. The format is
 based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this
 project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.0.8]
+
+### Changed
+- Full README rewrite: restructured to match the standard Panth Infotech
+  template with Quick Answer, Who Is It For, Key Features, Compatibility,
+  Installation, Configuration, How It Works, Scaling, FAQ, Support, About,
+  and Quick Links sections. Added SEO meta block, badge row with live product
+  page link, hire/agency promo block, and closing CTA. Configuration table
+  updated to reflect all 17 system.xml fields including the three optional
+  integration toggles (Testimonials, FAQs, Dynamic Forms) added in 1.0.4+.
+  Screenshots section preserved.
+
 ## [1.0.3]
 
 ### Added
