@@ -7,10 +7,6 @@ use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
 use Panth\HtmlSitemap\ViewModel\HtmlSitemap as HtmlSitemapViewModel;
 
-/**
- * HTML sitemap block. Theme-agnostic: the template is plain PHP and
- * contains no JavaScript, Alpine, or mage-init directives.
- */
 class Sitemap extends Template
 {
     public function __construct(

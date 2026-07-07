@@ -14,9 +14,6 @@ class ProductSortOrder implements OptionSourceInterface
     public const PRICE     = 'price';
     public const POSITION  = 'position';
 
-    /**
-     * @return array<int, array{value: string, label: \Magento\Framework\Phrase}>
-     */
     public function toOptionArray(): array
     {
         return [

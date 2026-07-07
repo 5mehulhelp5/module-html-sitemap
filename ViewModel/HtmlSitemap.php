@@ -10,19 +10,10 @@ use Magento\Store\Model\StoreManagerInterface;
 use Panth\HtmlSitemap\Helper\Config;
 use Psr\Log\LoggerInterface;
 
-/**
- * Theme-agnostic HTML sitemap data source.
- *
- * Returns lightweight arrays for template rendering — no block-specific
- * logic, no JavaScript. All section visibility and sort options are driven
- * by admin configuration under panth_html_sitemap/general/*.
- */
 class HtmlSitemap implements ArgumentInterface
 {
-    /** @var int Absolute hard cap across ALL pages combined. At 500 products/page × 2000 pages = 1,000,000 products. Beyond that, an XML sitemap is the right tool. */
     private const ABSOLUTE_HARD_CAP = 2000;
 
-    /** @var int|null Memoised total product count for this request. */
     private ?int $totalProductCount = null;
 
     public function __construct(
@@ -34,10 +25,6 @@ class HtmlSitemap implements ArgumentInterface
     ) {
     }
 
-    /**
-     * Read the current page from the `p` query param and clamp to a
-     * non-negative int. Malicious or malformed values fall back to page 1.
-     */
     public function getCurrentPage(): int
     {
         $raw = $this->request->getParam('p', 1);
@@ -57,10 +44,6 @@ class HtmlSitemap implements ArgumentInterface
         return $this->config->getProductsPerPage();
     }
 
-    /**
-     * Return a single COUNT(*) over the visible-product select — cheap even
-     * at 100k+ products because the underlying indexes cover every filter.
-     */
     public function getTotalProductCount(): int
     {
         if ($this->totalProductCount !== null) {
@@ -125,11 +108,6 @@ class HtmlSitemap implements ArgumentInterface
         return min($pages, self::ABSOLUTE_HARD_CAP);
     }
 
-    /**
-     * Return pagination metadata suitable for a prev/next + numbered page UI.
-     *
-     * @return array{current: int, total: int, per_page: int, total_items: int, window: int[], base_url: string}
-     */
     public function getProductPagination(): array
     {
         $current = $this->getCurrentPage();
@@ -137,7 +115,6 @@ class HtmlSitemap implements ArgumentInterface
         $per     = $this->getProductsPerPage();
         $count   = $this->getTotalProductCount();
 
-        // A compact sliding window: up to 5 page numbers centered on current.
         $windowStart = max(1, $current - 2);
         $windowEnd   = min($total, $current + 2);
         $window = [];
@@ -155,10 +132,6 @@ class HtmlSitemap implements ArgumentInterface
         ];
     }
 
-    /**
-     * Build the canonical pagination base URL (e.g. "https://store.example/sitemap").
-     * Pagination links append `?p=N` to this.
-     */
     public function getPaginationBaseUrl(): string
     {
         try {
@@ -169,10 +142,6 @@ class HtmlSitemap implements ArgumentInterface
             return '/sitemap';
         }
     }
-
-    // ------------------------------------------------------------------
-    //  Config-driven accessors
-    // ------------------------------------------------------------------
 
     public function isEnabled(): bool
     {
@@ -243,14 +212,6 @@ class HtmlSitemap implements ArgumentInterface
         return $this->config->isShowDynamicForms();
     }
 
-    /**
-     * Parse the custom_links textarea config.
-     *
-     * Each line follows the format:  URL | Label
-     * If no pipe is present the URL is used as the label.
-     *
-     * @return array<int, array{url: string, label: string}>
-     */
     public function getCustomLinks(): array
     {
         $raw = trim($this->config->getCustomLinks());
@@ -285,16 +246,6 @@ class HtmlSitemap implements ArgumentInterface
         return $links;
     }
 
-    // ------------------------------------------------------------------
-    //  Data loaders
-    // ------------------------------------------------------------------
-
-    /**
-     * Build a nested category tree, optionally limited by depth and
-     * respecting the `exclude_from_html_sitemap` attribute when present.
-     *
-     * @return array<int, array{id: int, name: string, url: string, level: int, children: array}>
-     */
     public function getCategories(): array
     {
         try {
@@ -424,12 +375,6 @@ class HtmlSitemap implements ArgumentInterface
         }
     }
 
-    /**
-     * Load visible products for the current store, sorted by config,
-     * limited to {@see PRODUCT_LIMIT}.
-     *
-     * @return array<int, array{name: string, url: string, image: string, price: string}>
-     */
     public function getProducts(): array
     {
         try {
@@ -662,12 +607,6 @@ class HtmlSitemap implements ArgumentInterface
         }
     }
 
-    /**
-     * Load active CMS pages for the current store, excluding the homepage
-     * identifier and no-route page.
-     *
-     * @return array<int, array{title: string, url: string}>
-     */
     public function getCmsPages(): array
     {
         try {
@@ -712,11 +651,6 @@ class HtmlSitemap implements ArgumentInterface
         }
     }
 
-    /**
-     * Return all active stores. Useful for a store-switcher section.
-     *
-     * @return array<int, array{name: string, url: string}>
-     */
     public function getStores(): array
     {
         try {
@@ -738,20 +672,6 @@ class HtmlSitemap implements ArgumentInterface
         }
     }
 
-    // ------------------------------------------------------------------
-    //  Optional integrations — render only when source module is installed
-    // ------------------------------------------------------------------
-
-    /**
-     * Testimonials section.
-     *
-     * **Conditional**: returns [] when the `panth_testimonial` table
-     * isn't present (the source module isn't installed). Never
-     * references a `Panth_Testimonials` class — pure raw SQL through
-     * the resource connection.
-     *
-     * @return array<int, array{title: string, url: string}>
-     */
     public function getTestimonials(): array
     {
         try {
@@ -771,7 +691,6 @@ class HtmlSitemap implements ArgumentInterface
 
             $out = [];
 
-            // Categories first (broader landing pages).
             if ($conn->isTableExists($catTable)) {
                 $cols = $conn->describeTable($catTable);
                 $columns = ['url_key', 'name'];
@@ -800,7 +719,6 @@ class HtmlSitemap implements ArgumentInterface
                 }
             }
 
-            // Individual approved testimonials.
             if ($conn->isTableExists($table)) {
                 $cols = $conn->describeTable($table);
                 $columns = ['url_key', 'title'];
@@ -837,14 +755,6 @@ class HtmlSitemap implements ArgumentInterface
         }
     }
 
-    /**
-     * FAQ section.
-     *
-     * **Conditional**: returns [] when neither `panth_faq_item` nor
-     * `panth_faq_category` exists.
-     *
-     * @return array<int, array{title: string, url: string}>
-     */
     public function getFaqs(): array
     {
         try {
@@ -863,8 +773,6 @@ class HtmlSitemap implements ArgumentInterface
             }
             $hasItemStore = $hasItems && $conn->isTableExists($itemStore);
 
-            // Source module stores this under `panth_faq/general/faq_route`
-            // (Helper\Data::XML_PATH_FAQ_ROUTE in module-faq).
             $base = trim((string) ($this->config->getValue('panth_faq/general/faq_route', $storeId)
                 ?: 'faq'), '/') ?: 'faq';
 
@@ -933,15 +841,6 @@ class HtmlSitemap implements ArgumentInterface
         }
     }
 
-    /**
-     * Dynamic Forms section.
-     *
-     * **Conditional**: returns [] when the `panth_dynamic_form` table
-     * is missing. Skips widget-only forms (form_type = 'widget') —
-     * they don't have a standalone URL.
-     *
-     * @return array<int, array{title: string, url: string}>
-     */
     public function getDynamicForms(): array
     {
         try {
@@ -979,7 +878,7 @@ class HtmlSitemap implements ArgumentInterface
                 }
                 $title = trim((string) ($row['title'] ?? ''));
                 if ($title === '') {
-                    $title = trim((string) ($row['name'] ?? '')); // admin name fallback
+                    $title = trim((string) ($row['name'] ?? ''));
                 }
                 if ($title === '') {
                     $title = $key;
@@ -995,10 +894,6 @@ class HtmlSitemap implements ArgumentInterface
             return [];
         }
     }
-
-    // ------------------------------------------------------------------
-    //  Counts + meta helpers for header/summary UI
-    // ------------------------------------------------------------------
 
     public function getCategoryCount(array $nodes): int
     {
@@ -1049,18 +944,10 @@ class HtmlSitemap implements ArgumentInterface
         }
     }
 
-    /**
-     * @deprecated Use getCategories() instead.
-     * @return array<int, array{id: int, name: string, url: string, level: int, children: array}>
-     */
     public function getCategoryTree(): array
     {
         return $this->getCategories();
     }
-
-    // ------------------------------------------------------------------
-    //  Private helpers
-    // ------------------------------------------------------------------
 
     private function getCategoryEntityTypeId(): int
     {
@@ -1080,17 +967,6 @@ class HtmlSitemap implements ArgumentInterface
         );
     }
 
-    /**
-     * Return entity IDs that have a specific integer attribute value.
-     *
-     * @param  \Magento\Framework\DB\Adapter\AdapterInterface $conn
-     * @param  string $table  The EAV int table name
-     * @param  int    $attrId
-     * @param  int    $storeId
-     * @param  int[]  $entityIds
-     * @param  int    $value
-     * @return int[]
-     */
     private function fetchIntAttributeSet(
         $conn,
         string $table,

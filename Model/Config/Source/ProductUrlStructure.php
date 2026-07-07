@@ -7,9 +7,6 @@ use Magento\Framework\Data\OptionSourceInterface;
 
 class ProductUrlStructure implements OptionSourceInterface
 {
-    /**
-     * @return array<int, array{value: string, label: \Magento\Framework\Phrase}>
-     */
     public function toOptionArray(): array
     {
         return [

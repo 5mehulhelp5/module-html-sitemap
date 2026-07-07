@@ -9,12 +9,6 @@ use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\View\Result\Page;
 use Panth\HtmlSitemap\Helper\Config;
 
-/**
- * Frontend controller for /htmlsitemap/index/index — renders the HTML sitemap.
- *
- * When the feature is disabled in admin configuration the controller
- * returns a 404 forward instead of the page.
- */
 class Index implements HttpGetActionInterface
 {
     public function __construct(
@@ -26,7 +20,6 @@ class Index implements HttpGetActionInterface
     public function execute(): ResultInterface
     {
         if (!$this->config->isEnabled()) {
-            /** @var \Magento\Framework\Controller\Result\Forward $forward */
             $forward = $this->resultFactory->create(ResultFactory::TYPE_FORWARD);
             $forward->setModule('cms');
             $forward->setController('noroute');
@@ -34,7 +27,6 @@ class Index implements HttpGetActionInterface
             return $forward;
         }
 
-        /** @var Page $result */
         $result = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
 
         $metaTitle = trim($this->config->getMetaTitle());

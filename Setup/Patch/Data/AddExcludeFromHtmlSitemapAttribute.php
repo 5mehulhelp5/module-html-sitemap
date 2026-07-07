@@ -11,14 +11,6 @@ use Magento\Eav\Setup\EavSetupFactory;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 
-/**
- * Adds the `exclude_from_html_sitemap` boolean attribute to catalog categories.
- *
- * Checked when rendering the HTML sitemap — categories with this flag set
- * are filtered out of the tree. The attribute is placed in the
- * "Search Engine Optimization" attribute group when it exists; otherwise
- * it falls back to the default attribute group for the set.
- */
 class AddExcludeFromHtmlSitemapAttribute implements DataPatchInterface
 {
     public function __construct(
@@ -31,7 +23,6 @@ class AddExcludeFromHtmlSitemapAttribute implements DataPatchInterface
     {
         $this->moduleDataSetup->startSetup();
 
-        /** @var EavSetup $eavSetup */
         $eavSetup = $this->eavSetupFactory->create(['setup' => $this->moduleDataSetup]);
 
         if (!$eavSetup->getAttributeId(Category::ENTITY, 'exclude_from_html_sitemap')) {
@@ -61,10 +52,6 @@ class AddExcludeFromHtmlSitemapAttribute implements DataPatchInterface
         return $this;
     }
 
-    /**
-     * Assign the attribute to every existing category attribute set, preferring
-     * the "Search Engine Optimization" group when present.
-     */
     private function addAttributeToAllSets(EavSetup $eavSetup, string $attributeCode): void
     {
         $entityTypeId  = $eavSetup->getEntityTypeId(Category::ENTITY);
